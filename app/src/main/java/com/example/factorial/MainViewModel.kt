@@ -14,9 +14,9 @@ class MainViewModel : ViewModel() {
         get() = _state
 
     fun calculate(value: String?) {
-        _state.value = Progress()
+        _state.value = Progress
         if (value.isNullOrBlank()) {
-            _state.value = Error()
+            _state.value = Error
             return
         }
         viewModelScope.launch {

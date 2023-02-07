@@ -1,9 +1,9 @@
 package com.example.factorial
 
-open class State
+sealed class State
 
-class Error : State()
+object Error : State()
 
-class Progress : State()
+object Progress : State()
 
 class Result(val factorial: String) : State()
